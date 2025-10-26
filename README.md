@@ -117,7 +117,7 @@ Campaign launches from user's dedicated number
 ```json
 {
   "survey_id": "uuid",
-  "test_mode": false  // true = calls only first contact
+  "test_mode": false
 }
 ```
 
