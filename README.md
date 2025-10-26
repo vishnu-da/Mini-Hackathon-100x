@@ -8,7 +8,6 @@ A FastAPI-based backend for managing AI-powered voice surveys using Twilio for v
 - 📞 **Twilio Integration** - Automated voice call management
 - 🤖 **OpenAI Integration** - AI-powered conversational surveys
 - 💾 **Supabase Database** - Real-time database and authentication
-- 🎭 **Playwright Support** - Browser automation capabilities
 - 🔒 **Environment Configuration** - Secure configuration management
 
 ## Project Structure
