@@ -1,0 +1,76 @@
+Reflex — Computed Vars (@rx.var)
+Computed vars in Reflex are state-dependent properties derived from other variables in your State class.
+They’re defined using the decorator @rx.var, and Reflex automatically recomputes them when events modify dependent values.​
+
+Basic Definition
+python
+import reflex as rx
+
+class MyState(rx.State):
+    text: str = "hello"
+
+    @rx.var
+    def upper_text(self) -> str:
+        return self.text.upper()
+upper_text is automatically updated every time text changes.
+
+It cannot be directly modified — only recomputed from dependencies.​
+
+Cached Vars
+python
+@rx.var(cache=True)
+def summary(self) -> str:
+    return f"Summary: {self.text}"
+Cached computed vars only recompute when dependent vars change.
+
+Use for heavy or expensive calculations (e.g., long processing, aggregation tasks).
+
+Replaces the older @rx.cached_var syntax.​
+
+Async Computed Vars
+Async vars let you perform asynchronous operations like API calls or database queries:
+
+python
+@rx.var
+async def delayed_result(self) -> int:
+    await asyncio.sleep(1)
+    return self.count * 2
+Works with async def, allowing non-blocking logic.
+
+Can also be cached with @rx.var(cache=True) for performance optimization.​
+
+Lucide Icons (Used in Reflex’s rx.icon())
+Reflex uses Lucide Icons, a community-maintained icon library of scalable SVG assets.​
+Icons are passed via the tag prop in rx.icon(), for example:
+
+python
+rx.icon(tag="search", size=24, color="blue")
+Lucide provides icons in both snake_case and kebab-case.
+Below are representative examples (full list available on lucide.dev) :​
+
+Icon Name	Example Tag
+Activity	"activity"
+Airplay	"airplay"
+Alarm Clock	"alarm_clock" or "alarm-clock"
+Arrow Right	"arrow_right" or "arrow-right"
+Camera	"camera"
+Check Circle	"check_circle" or "check-circle"
+Chevron Down	"chevron_down" or "chevron-down"
+Cloud	"cloud"
+Edit	"edit"
+Trash	"trash"
+Each icon supports props such as:
+
+size (int) — sets icon dimension (e.g., 24)
+
+stroke_width (float) — controls line weight
+
+color (string) — any CSS or Reflex-controlled color value
+
+Can use rx.color("accent") for theme integration.​
+
+In summary:
+
+Use @rx.var for reactive computed or cached properties inside state classes.
+
+Define all icons via Lucide’s standardized library using rx.icon(tag="...") for dynamic usage.

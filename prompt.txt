@@ -1,0 +1,5 @@
+Improvements to be made:
+
+1. OpenAIrealtime should be crsip and quick while introduction since the calls are costly. So it should just says "Hi, I am AI assistant of {researcher name}, conducting research survey on the topic {reseearch title}. I'd like you consent so we can procced further. Shall we?" This is quick, crisp, to the point and cost-effective.
+2. The OpenAIrealtime need to move to the next question automatically if I have given the answer to the current question. Right Now the user has to say "move to next question"/"let's move to the next one" and so on.
+3. Also the sound of AI sounds like AI, not like a real human. Is that possible with OpenAI?

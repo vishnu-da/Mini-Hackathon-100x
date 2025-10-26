@@ -1,0 +1,27 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+supabase>=2.21.0
+postgrest>=2.22.0
+twilio>=9.4.0
+openai>=1.99.2
+playwright==1.49.1
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.0
+httpx==0.28.1
+authlib==1.3.0
+google-api-python-client==2.108.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.1.0
+msal==1.24.1
+PyJWT==2.8.0
+pandas>=2.2.3
+python-multipart==0.0.9
+websockets==12.0
+
+# LiveKit Dependencies
+livekit>=1.0.17
+livekit-agents>=1.2.15
+livekit-plugins-openai>=1.2.7
+livekit-plugins-deepgram>=1.2.3
+livekit-plugins-silero>=1.2.8

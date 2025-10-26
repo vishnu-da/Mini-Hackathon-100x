@@ -1,0 +1,45 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+error.txt
+nul
+
+# Test files and debugging
+test_*.py
+check_token.py
+debug_token.py
+*.wav
+
+# Data files
+contacts.csv
+RESO/
+
+# Sensitive files
+call_logs_rows.csv
+context.txt
