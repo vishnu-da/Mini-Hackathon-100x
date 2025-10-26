@@ -582,29 +582,6 @@ CALLBACK_BASE_URL=https://yourdomain.com
 
 ---
 
-## Migration Notes
-
-### From Twilio + OpenAI Realtime → LiveKit
-
-**Why Migrate:**
-- ✅ 90% cost reduction (OpenAI Realtime: $0.60/min → Groq: $0.035/min)
-- ✅ 3x lower latency (Groq: 500 tokens/sec vs GPT: 50 tokens/sec)
-- ✅ Better conversation flow (LiveKit turn detection)
-- ✅ Multi-provider STT/TTS flexibility
-
-**What Changed:**
-- ❌ Removed: `twilio_client.py`, `voice_agent.py` (OpenAI Realtime)
-- ❌ Removed: `post_call_processor.py`, `response_mapper.py` (post-call processing)
-- ✅ Added: `livekit_entrypoint.py`, `livekit_voice_agent.py`, `livekit_outbound.py`
-- ✅ Updated: Per-user phone provisioning, SIP trunk management
-
-**Database Changes:**
-- Added: `twilio_phone_number`, `livekit_trunk_id` to users table
-- Added: `phone_numbers`, `sip_trunks` tables
-- Added: `voice_agent_voice`, `voice_agent_instructions` to surveys table
-
----
-
 ## Success Criteria
 
 ### Technical
